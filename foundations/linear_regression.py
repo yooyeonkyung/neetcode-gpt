@@ -13,5 +13,6 @@ class Solution:
         # Compute mean squared error between predictions and ground truth
         # Round to 5 decimal places
         # pred: (n,)
+        assert model_prediction.shape == ground_truth.shape
         mse = np.mean(np.square(model_prediction - ground_truth))
         return round(mse, 5)
